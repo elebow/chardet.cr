@@ -15,9 +15,9 @@ module Chardet
     fun get_charset = uchardet_get_charset(UchardetT) : LibC::Char*
   end
 
-  def self.detect(bytes : String)
+  def self.detect(bytes : Bytes)
     ud = LibUChardet.new
-    LibUChardet.handle_data(ud, bytes, sizeof(typeof(bytes)))
+    LibUChardet.handle_data(ud, bytes, bytes.bytesize)
     LibUChardet.data_end(ud)
 
     String.new(LibUChardet.get_charset(ud))
