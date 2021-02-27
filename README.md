@@ -1,6 +1,6 @@
 # chardet
 
-TODO: Write a description here
+Crystal bindings for freedesktop.org's [uchardet](https://www.freedesktop.org/wiki/Software/uchardet/).
 
 ## Installation
 
@@ -9,31 +9,37 @@ TODO: Write a description here
    ```yaml
    dependencies:
      chardet:
-       github: your-github-user/chardet
+       github: elebow/chardet-crystal
    ```
 
-2. Run `shards install`
+1. Run `shards install`
 
 ## Usage
 
 ```crystal
 require "chardet"
+
+# ...
+
+Chardet.detect(unknown_bytes)
+# {encoding: "UTF-8"}
 ```
 
-TODO: Write usage instructions here
+The only public interface is `Chardet.detect`, which takes a single argument of type
+`Bytes`. It will return a hash with a single element:
 
-## Development
+- `encoding : String`: The detected encoding of the byte stream
 
-TODO: Write development instructions here
+Future versions of uchardet are likely to provide additional fields (see <https://gitlab.freedesktop.org/uchardet/uchardet/-/issues/5#note_474963>).
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/chardet/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1. Fork it (<https://github.com/elebow/chardet-crystal/fork>)
+1. Create your feature branch (`git checkout -b my-new-feature`)
+1. Commit your changes (`git commit -am 'Add some feature'`)
+1. Push to the branch (`git push origin my-new-feature`)
+1. Create a new Pull Request
 
 ## Contributors
 
-- [Eddie Lebow](https://github.com/your-github-user) - creator and maintainer
+- [Eddie Lebow](https://github.com/elebow) - creator and maintainer
