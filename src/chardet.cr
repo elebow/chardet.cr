@@ -20,6 +20,8 @@ module Chardet
     LibUChardet.handle_data(ud, bytes, bytes.bytesize)
     LibUChardet.data_end(ud)
 
-    String.new(LibUChardet.get_charset(ud))
+    {
+      encoding: String.new(LibUChardet.get_charset(ud)),
+    }
   end
 end
