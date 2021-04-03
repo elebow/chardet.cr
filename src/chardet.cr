@@ -1,4 +1,4 @@
-# TODO: Write documentation for `Chardet`
+# Interface to uchardet, a character encoding detector.
 module Chardet
   VERSION = "0.1.0"
 
@@ -15,6 +15,7 @@ module Chardet
     fun get_charset = uchardet_get_charset(UchardetT) : LibC::Char*
   end
 
+  # Detects the character encoding of *bytes*.
   def self.detect(bytes : Bytes)
     ud = LibUChardet.new
     LibUChardet.handle_data(ud, bytes, bytes.bytesize)
