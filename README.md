@@ -9,7 +9,7 @@ Crystal bindings for freedesktop.org's [uchardet](https://www.freedesktop.org/wi
    ```yaml
    dependencies:
      chardet:
-       github: elebow/chardet-crystal
+       github: elebow/chardet.cr
    ```
 
 1. Run `shards install`
@@ -34,7 +34,7 @@ Future versions of uchardet are likely to provide additional fields (see <https:
 
 ## Contributing
 
-1. Fork it (<https://github.com/elebow/chardet-crystal/fork>)
+1. Fork it (<https://github.com/elebow/chardet.cr/fork>)
 1. Create your feature branch (`git checkout -b my-new-feature`)
 1. Commit your changes (`git commit -am 'Add some feature'`)
 1. Push to the branch (`git push origin my-new-feature`)
