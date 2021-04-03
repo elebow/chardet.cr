@@ -2,7 +2,7 @@
 module Chardet
   VERSION = "0.1.0"
 
-  @[Link(ldflags: "/usr/lib/x86_64-linux-gnu/libuchardet.so")]
+  @[Link("uchardet")]
 
   lib LibUChardet
     type UchardetT = Void*
