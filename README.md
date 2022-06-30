@@ -19,8 +19,6 @@ Crystal bindings for freedesktop.org's [uchardet](https://www.freedesktop.org/wi
 ```crystal
 require "chardet"
 
-# ...
-
 Chardet.detect(unknown_bytes)
 # {encoding: "UTF-8"}
 ```
